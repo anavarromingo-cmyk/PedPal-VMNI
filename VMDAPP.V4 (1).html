@@ -1,0 +1,1855 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Clínica de VMNI Pediátrica</title>
+    <style>
+        /* Perplexity Design System CSS */
+        :root {
+          /* Primitive Color Tokens */
+          --color-white: rgba(255, 255, 255, 1);
+          --color-black: rgba(0, 0, 0, 1);
+          --color-cream-50: rgba(252, 252, 249, 1);
+          --color-cream-100: rgba(255, 255, 253, 1);
+          --color-gray-200: rgba(245, 245, 245, 1);
+          --color-gray-300: rgba(167, 169, 169, 1);
+          --color-gray-400: rgba(119, 124, 124, 1);
+          --color-slate-500: rgba(98, 108, 113, 1);
+          --color-brown-600: rgba(94, 82, 64, 1);
+          --color-charcoal-700: rgba(31, 33, 33, 1);
+          --color-charcoal-800: rgba(38, 40, 40, 1);
+          --color-slate-900: rgba(19, 52, 59, 1);
+          --color-teal-300: rgba(50, 184, 198, 1);
+          --color-teal-400: rgba(45, 166, 178, 1);
+          --color-teal-500: rgba(33, 128, 141, 1);
+          --color-teal-600: rgba(29, 116, 128, 1);
+          --color-teal-700: rgba(26, 104, 115, 1);
+          --color-teal-800: rgba(41, 150, 161, 1);
+          --color-red-400: rgba(255, 84, 89, 1);
+          --color-red-500: rgba(192, 21, 47, 1);
+          --color-orange-400: rgba(230, 129, 97, 1);
+          --color-orange-500: rgba(168, 75, 47, 1);
+        
+          /* RGB versions for opacity control */
+          --color-brown-600-rgb: 94, 82, 64;
+          --color-teal-500-rgb: 33, 128, 141;
+          --color-slate-900-rgb: 19, 52, 59;
+          --color-slate-500-rgb: 98, 108, 113;
+          --color-red-500-rgb: 192, 21, 47;
+          --color-red-400-rgb: 255, 84, 89;
+          --color-orange-500-rgb: 168, 75, 47;
+          --color-orange-400-rgb: 230, 129, 97;
+        
+          /* Background color tokens (Light Mode) */
+          --color-bg-1: rgba(59, 130, 246, 0.08);
+          --color-bg-2: rgba(245, 158, 11, 0.08);
+          --color-bg-3: rgba(34, 197, 94, 0.08);
+          --color-bg-4: rgba(239, 68, 68, 0.08);
+          --color-bg-5: rgba(147, 51, 234, 0.08);
+          --color-bg-6: rgba(249, 115, 22, 0.08);
+          --color-bg-7: rgba(236, 72, 153, 0.08);
+          --color-bg-8: rgba(6, 182, 212, 0.08);
+        
+          /* Semantic Color Tokens (Light Mode) */
+          --color-background: var(--color-cream-50);
+          --color-surface: var(--color-cream-100);
+          --color-text: var(--color-slate-900);
+          --color-text-secondary: var(--color-slate-500);
+          --color-primary: var(--color-teal-500);
+          --color-primary-hover: var(--color-teal-600);
+          --color-primary-active: var(--color-teal-700);
+          --color-secondary: rgba(var(--color-brown-600-rgb), 0.12);
+          --color-secondary-hover: rgba(var(--color-brown-600-rgb), 0.2);
+          --color-secondary-active: rgba(var(--color-brown-600-rgb), 0.25);
+          --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+          --color-btn-primary-text: var(--color-cream-50);
+          --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
+          --color-card-border-inner: rgba(var(--color-brown-600-rgb), 0.12);
+          --color-error: var(--color-red-500);
+          --color-success: var(--color-teal-500);
+          --color-warning: var(--color-orange-500);
+          --color-info: var(--color-slate-500);
+          --color-focus-ring: rgba(var(--color-teal-500-rgb), 0.4);
+          --color-select-caret: rgba(var(--color-slate-900-rgb), 0.8);
+        
+          /* Typography */
+          --font-family-base: "Arial", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+          --font-size-xs: 11px;
+          --font-size-sm: 12px;
+          --font-size-base: 14px;
+          --font-size-md: 14px;
+          --font-size-lg: 16px;
+          --font-size-xl: 18px;
+          --font-size-2xl: 20px;
+          --font-size-3xl: 24px;
+          --font-size-4xl: 30px;
+          --font-weight-normal: 400;
+          --font-weight-medium: 500;
+          --font-weight-semibold: 550;
+          --font-weight-bold: 600;
+          --line-height-tight: 1.2;
+          --line-height-normal: 1.5;
+        
+          /* Spacing */
+          --space-4: 4px;
+          --space-8: 8px;
+          --space-12: 12px;
+          --space-16: 16px;
+          --space-20: 20px;
+          --space-24: 24px;
+          --space-32: 32px;
+        
+          /* Border Radius */
+          --radius-sm: 6px;
+          --radius-base: 8px;
+          --radius-md: 10px;
+          --radius-lg: 12px;
+        
+          /* Shadows */
+          --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+          --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+        
+          /* Animation */
+          --duration-fast: 150ms;
+          --duration-normal: 250ms;
+          --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        /* Clinical app specific colors */
+        :root {
+          --clinical-green: #28A745;
+          --clinical-blue: #2C5F7C;
+          --clinical-orange: #FFC107;
+          --clinical-red: #DC3545;
+          --clinical-bg: #F8F9FA;
+          --clinical-text: #212529;
+        }
+        
+        /* Base styles */
+        html {
+          font-size: var(--font-size-base);
+          font-family: var(--font-family-base);
+          line-height: var(--line-height-normal);
+          color: var(--clinical-text);
+          background-color: var(--clinical-bg);
+          box-sizing: border-box;
+        }
+        
+        body {
+          margin: 0;
+          padding: var(--space-20);
+        }
+        
+        *, *::before, *::after {
+          box-sizing: inherit;
+        }
+        
+        /* Layout */
+        .container {
+          max-width: 900px;
+          margin: 0 auto;
+          background: var(--color-white);
+          border-radius: var(--radius-lg);
+          box-shadow: var(--shadow-md);
+          padding: var(--space-32);
+        }
+        
+        .header {
+          text-align: center;
+          margin-bottom: var(--space-32);
+          padding-bottom: var(--space-24);
+          border-bottom: 2px solid var(--color-border);
+        }
+        
+        .header h1 {
+          font-size: var(--font-size-4xl);
+          color: var(--clinical-blue);
+          margin-bottom: var(--space-8);
+          font-weight: var(--font-weight-bold);
+        }
+        
+        .header p {
+          font-size: var(--font-size-lg);
+          color: var(--color-text-secondary);
+          margin: 0;
+        }
+        
+        /* Navigation */
+        .main-nav {
+          display: flex;
+          flex-direction: column;
+          gap: var(--space-24);
+          margin-bottom: var(--space-32);
+        }
+        
+        .nav-button {
+          padding: var(--space-24) var(--space-32);
+          border: none;
+          border-radius: var(--radius-lg);
+          font-size: var(--font-size-xl);
+          font-weight: var(--font-weight-bold);
+          cursor: pointer;
+          transition: all var(--duration-normal) var(--ease-standard);
+          text-align: center;
+          box-shadow: var(--shadow-sm);
+        }
+        
+        .nav-button:hover {
+          transform: translateY(-2px);
+          box-shadow: var(--shadow-md);
+        }
+        
+        .nav-button--primary {
+          background: var(--clinical-green);
+          color: white;
+        }
+        
+        .nav-button--secondary {
+          background: var(--clinical-orange);
+          color: white;
+        }
+        
+        /* Forms */
+        .form-group {
+          margin-bottom: var(--space-20);
+        }
+        
+        .form-label {
+          display: block;
+          margin-bottom: var(--space-8);
+          font-weight: var(--font-weight-medium);
+          color: var(--clinical-text);
+          font-size: var(--font-size-md);
+        }
+        
+        .form-control {
+          width: 100%;
+          padding: var(--space-12) var(--space-16);
+          border: 2px solid var(--color-border);
+          border-radius: var(--radius-base);
+          font-size: var(--font-size-md);
+          background: var(--color-white);
+          transition: border-color var(--duration-fast) var(--ease-standard);
+        }
+        
+        .form-control:focus {
+          outline: none;
+          border-color: var(--clinical-blue);
+        }
+        
+        select.form-control {
+          appearance: none;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23212529' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+          background-repeat: no-repeat;
+          background-position: right var(--space-12) center;
+          background-size: 16px;
+          padding-right: var(--space-32);
+        }
+        
+        /* Buttons */
+        .btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: var(--space-12) var(--space-24);
+          border: none;
+          border-radius: var(--radius-base);
+          font-size: var(--font-size-md);
+          font-weight: var(--font-weight-medium);
+          cursor: pointer;
+          transition: all var(--duration-normal) var(--ease-standard);
+          text-decoration: none;
+          margin-right: var(--space-12);
+          margin-bottom: var(--space-8);
+        }
+        
+        .btn:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+        
+        .btn--primary {
+          background: var(--clinical-blue);
+          color: white;
+        }
+        
+        .btn--primary:hover:not(:disabled) {
+          background: #1e4a63;
+        }
+        
+        .btn--success {
+          background: var(--clinical-green);
+          color: white;
+        }
+        
+        .btn--success:hover:not(:disabled) {
+          background: #218838;
+        }
+        
+        .btn--secondary {
+          background: var(--color-secondary);
+          color: var(--clinical-text);
+          border: 1px solid var(--color-border);
+        }
+        
+        .btn--secondary:hover:not(:disabled) {
+          background: var(--color-secondary-hover);
+        }
+        
+        .btn--danger {
+          background: var(--clinical-red);
+          color: white;
+        }
+        
+        /* Checklist */
+        .checklist {
+          margin: var(--space-24) 0;
+        }
+        
+        .checklist-item {
+          background: var(--color-surface);
+          border: 1px solid var(--color-card-border);
+          border-radius: var(--radius-base);
+          padding: var(--space-16);
+          margin-bottom: var(--space-12);
+        }
+        
+        .checklist-question {
+          font-weight: var(--font-weight-medium);
+          margin-bottom: var(--space-8);
+          color: var(--clinical-text);
+        }
+        
+        .checklist-detail {
+          font-size: var(--font-size-sm);
+          color: var(--color-text-secondary);
+          margin-bottom: var(--space-12);
+          font-style: italic;
+        }
+        
+        .radio-group {
+          display: flex;
+          gap: var(--space-16);
+        }
+        
+        .radio-option {
+          display: flex;
+          align-items: center;
+          gap: var(--space-8);
+        }
+        
+        .radio-option input[type="radio"] {
+          width: 18px;
+          height: 18px;
+          margin: 0;
+        }
+        
+        .radio-option label {
+          font-size: var(--font-size-md);
+          font-weight: var(--font-weight-medium);
+          cursor: pointer;
+        }
+        
+        /* Alert boxes */
+        .alert {
+          padding: var(--space-16);
+          border-radius: var(--radius-base);
+          margin: var(--space-16) 0;
+          border-left: 4px solid;
+          font-weight: var(--font-weight-medium);
+        }
+        
+        .alert-success {
+          background: rgba(40, 167, 69, 0.1);
+          border-color: var(--clinical-green);
+          color: #155724;
+        }
+        
+        .alert-warning {
+          background: rgba(255, 193, 7, 0.1);
+          border-color: var(--clinical-orange);
+          color: #856404;
+        }
+        
+        .alert-danger {
+          background: rgba(220, 53, 69, 0.1);
+          border-color: var(--clinical-red);
+          color: #721c24;
+        }
+        
+        .alert-info {
+          background: rgba(44, 95, 124, 0.1);
+          border-color: var(--clinical-blue);
+          color: #1a3a4d;
+        }
+        
+        /* Parameters display */
+        .parameters-container {
+          background: var(--color-bg-1);
+          border: 2px solid var(--clinical-blue);
+          border-radius: var(--radius-lg);
+          padding: var(--space-24);
+          margin: var(--space-24) 0;
+        }
+        
+        .parameters-title {
+          font-size: var(--font-size-xl);
+          font-weight: var(--font-weight-bold);
+          color: var(--clinical-blue);
+          margin-bottom: var(--space-16);
+          text-align: center;
+        }
+        
+        .parameter-section {
+          background: var(--color-white);
+          border-radius: var(--radius-base);
+          padding: var(--space-16);
+          margin-bottom: var(--space-16);
+          border: 1px solid var(--color-card-border);
+        }
+        
+        .parameter-section h4 {
+          color: var(--clinical-blue);
+          font-size: var(--font-size-lg);
+          margin-bottom: var(--space-12);
+          border-bottom: 1px solid var(--color-border);
+          padding-bottom: var(--space-8);
+        }
+        
+        .parameter-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+        
+        .parameter-list li {
+          padding: var(--space-8) 0;
+          border-bottom: 1px solid rgba(var(--color-brown-600-rgb), 0.1);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        
+        .parameter-list li:last-child {
+          border-bottom: none;
+        }
+        
+        .parameter-name {
+          font-weight: var(--font-weight-medium);
+        }
+        
+        .parameter-value {
+          font-weight: var(--font-weight-bold);
+          color: var(--clinical-blue);
+        }
+        
+        /* Sub-questions */
+        .sub-question {
+          margin-left: var(--space-24);
+          margin-top: var(--space-16);
+          padding: var(--space-16);
+          background: rgba(255, 193, 7, 0.05);
+          border-left: 3px solid var(--clinical-orange);
+          border-radius: var(--radius-base);
+        }
+        
+        /* Footer */
+        .footer {
+          text-align: center;
+          padding-top: var(--space-24);
+          margin-top: var(--space-32);
+          border-top: 1px solid var(--color-border);
+          font-size: var(--font-size-sm);
+          color: var(--color-text-secondary);
+        }
+        
+        /* Utility classes */
+        .hidden {
+          display: none;
+        }
+        
+        .text-center {
+          text-align: center;
+        }
+        
+        .mb-0 {
+          margin-bottom: 0;
+        }
+        
+        .mt-24 {
+          margin-top: var(--space-24);
+        }
+        
+        .flex {
+          display: flex;
+        }
+        
+        .justify-between {
+          justify-content: space-between;
+        }
+        
+        .gap-16 {
+          gap: var(--space-16);
+        }
+        
+        /* Patient summary */
+        .patient-summary {
+          background: var(--color-bg-3);
+          border: 1px solid var(--clinical-green);
+          border-radius: var(--radius-base);
+          padding: var(--space-16);
+          margin-bottom: var(--space-24);
+        }
+        
+        .patient-summary h3 {
+          color: var(--clinical-green);
+          margin-bottom: var(--space-12);
+          font-size: var(--font-size-lg);
+        }
+        
+        /* Protocol checklist */
+        .protocol-item {
+          background: var(--color-surface);
+          border: 1px solid var(--color-card-border);
+          border-radius: var(--radius-base);
+          padding: var(--space-12);
+          margin-bottom: var(--space-8);
+          display: flex;
+          align-items: flex-start;
+          gap: var(--space-12);
+        }
+        
+        .protocol-item input[type="checkbox"] {
+          width: 18px;
+          height: 18px;
+          margin-top: 2px;
+        }
+        
+        .protocol-item label {
+          flex: 1;
+          font-size: var(--font-size-sm);
+          line-height: 1.4;
+          cursor: pointer;
+        }
+        
+        /* Print styles */
+        @media print {
+          body {
+            background: white;
+            padding: 0;
+          }
+          
+          .container {
+            box-shadow: none;
+            max-width: none;
+          }
+          
+          .btn {
+            display: none;
+          }
+          
+          .nav-button {
+            display: none;
+          }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+          .container {
+            margin: 0;
+            padding: var(--space-16);
+            border-radius: 0;
+          }
+          
+          body {
+            padding: 0;
+          }
+          
+          .header h1 {
+            font-size: var(--font-size-3xl);
+          }
+          
+          .nav-button {
+            padding: var(--space-16) var(--space-20);
+            font-size: var(--font-size-lg);
+          }
+          
+          .radio-group {
+            flex-direction: column;
+            gap: var(--space-8);
+          }
+          
+          .parameter-list li {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: var(--space-4);
+          }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Home Screen -->
+        <div id="home-screen">
+            <div class="header">
+                <h1>Guía Clínica de VMNI Pediátrica en CPP</h1>
+                <p>Herramienta de Apoyo para Instauración y Retirada</p>
+            </div>
+            
+            <div class="main-nav">
+                <button class="nav-button nav-button--primary" onclick="showSection('instauracion')">
+                    📈 INSTAURACIÓN DE VMNI
+                </button>
+                <button class="nav-button nav-button--secondary" onclick="showSection('retirada')">
+                    📉 RETIRADA DE VMNI
+                </button>
+            </div>
+        </div>
+
+        <!-- Instauración Section -->
+        <div id="instauracion-section" class="hidden">
+            <!-- Step 1: Patient Data -->
+            <div id="instauracion-step1">
+                <div class="header">
+                    <h1>Instauración de VMNI</h1>
+                    <p>Paso 1: Datos del Paciente</p>
+                </div>
+                
+                <form id="patient-form">
+                    <div class="form-group">
+                        <label for="peso" class="form-label">Peso del paciente (kg):</label>
+                        <input type="number" id="peso" class="form-control" min="0.5" max="150" step="0.1" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="edad" class="form-label">Edad del paciente:</label>
+                        <select id="edad" class="form-control" required>
+                            <option value="">Seleccione la edad...</option>
+                            <option value="0">Recién nacido (0-28 días)</option>
+                            <option value="1">Lactante menor (1-6 meses)</option>
+                            <option value="2">Lactante mayor (6-12 meses)</option>
+                            <option value="3">Niño pequeño (1-3 años)</option>
+                            <option value="4">Preescolar (3-6 años)</option>
+                            <option value="5">Escolar (6-12 años)</option>
+                            <option value="6">Adolescente (&gt;12 años)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="motivo" class="form-label">Motivo de inicio de VMNI:</label>
+                        <select id="motivo" class="form-control" required>
+                            <option value="">Seleccione el motivo...</option>
+                            <option value="hipoxemica">IR hipoxémica</option>
+                            <option value="hipercapnica">IR hipercápnica</option>
+                            <option value="mixta">IR mixta</option>
+                            <option value="broncoespasmo">Broncoespasmo</option>
+                            <option value="neumonia">Neumonía</option>
+                            <option value="disnea">Control de disnea</option>
+                        </select>
+                    </div>
+                    
+                    <div class="flex justify-between mt-24">
+                        <button type="button" class="btn btn--secondary" onclick="showSection('home')">
+                            ← Volver al Inicio
+                        </button>
+                        <button type="button" class="btn btn--primary" id="continue-to-checklist" disabled onclick="showInstauracionStep(2)">
+                            Continuar →
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Step 2: Pre-VMNI Checklist -->
+            <div id="instauracion-step2" class="hidden">
+                <div class="header">
+                    <h1>Instauración de VMNI</h1>
+                    <p>Paso 2: Criterios Previos a la Instauración</p>
+                </div>
+                
+                <div class="checklist">
+                    <div class="checklist-item">
+                        <div class="checklist-question">1. ¿El paciente tiene insuficiencia respiratoria documentada?</div>
+                        <div class="checklist-detail">FR elevada, trabajo respiratorio aumentado, hipoxemia o hipercapnia</div>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="q1-si" name="q1" value="si">
+                                <label for="q1-si">SÍ</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="q1-no" name="q1" value="no">
+                                <label for="q1-no">NO</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="checklist-question">2. ¿Se han descartado contraindicaciones absolutas?</div>
+                        <div class="checklist-detail">shock no controlado, obstrucción completa de vía aérea, neumotórax no drenado</div>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="q2-si" name="q2" value="si">
+                                <label for="q2-si">SÍ</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="q2-no" name="q2" value="no">
+                                <label for="q2-no">NO</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="checklist-question">3. ¿El paciente puede proteger vía aérea o tiene reflejo tusígeno presente?</div>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="q3-si" name="q3" value="si" onchange="handleAirwayQuestion()">
+                                <label for="q3-si">SÍ</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="q3-no" name="q3" value="no" onchange="handleAirwayQuestion()">
+                                <label for="q3-no">NO</label>
+                            </div>
+                        </div>
+                        
+                        <div id="airway-subquestion" class="hidden">
+                            <div class="sub-question">
+                                <div class="checklist-question">3a. ¿Es admisible el poco control de protección de vía aérea en este paciente?</div>
+                                <div class="checklist-detail">Muchos pacientes en CPP tienen mal control de vía aérea y aún así es admisible</div>
+                                <div class="radio-group">
+                                    <div class="radio-option">
+                                        <input type="radio" id="q3a-si" name="q3a" value="si">
+                                        <label for="q3a-si">SÍ</label>
+                                    </div>
+                                    <div class="radio-option">
+                                        <input type="radio" id="q3a-no" name="q3a" value="no">
+                                        <label for="q3a-no">NO</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="checklist-question">4. ¿La familia comprende el objetivo de la VMNI y está de acuerdo?</div>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="q4-si" name="q4" value="si">
+                                <label for="q4-si">SÍ</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="q4-no" name="q4" value="no">
+                                <label for="q4-no">NO</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="checklist-question">5. ¿Está disponible el equipo necesario?</div>
+                        <div class="checklist-detail">ventilador, interfases, personal entrenado</div>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="q5-si" name="q5" value="si">
+                                <label for="q5-si">SÍ</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="q5-no" name="q5" value="no">
+                                <label for="q5-no">NO</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="checklist-question">6. ¿Se ha seleccionado interfase apropiada para la edad?</div>
+
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="q6-si" name="q6" value="si">
+                                <label for="q6-si">SÍ</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="q6-no" name="q6" value="no">
+                                <label for="q6-no">NO</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="checklist-result"></div>
+                
+                <div class="flex justify-between mt-24">
+                    <button type="button" class="btn btn--secondary" onclick="showInstauracionStep(1)">
+                        ← Volver
+                    </button>
+                    <button type="button" class="btn btn--primary" id="continue-to-parameters" onclick="evaluateChecklist()">
+                        Evaluar Criterios
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Step 3: Parameters -->
+            <div id="instauracion-step3" class="hidden">
+                <div class="header">
+                    <h1>Instauración de VMNI</h1>
+                    <p>Paso 3: Parámetros del Ventilador</p>
+                </div>
+                
+                <div id="patient-summary" class="patient-summary"></div>
+                
+                <div id="parameters-display" class="parameters-container"></div>
+                
+                <div class="flex justify-between mt-24">
+                    <button type="button" class="btn btn--secondary" onclick="showInstauracionStep(2)">
+                        ← Volver
+                    </button>
+                    <button type="button" class="btn btn--success" onclick="printParameters()">
+                        📄 Imprimir Recomendaciones
+                    </button>
+                    <button type="button" class="btn btn--primary" onclick="showSection('home')">
+                        🏠 Finalizar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Retirada Section -->
+        <div id="retirada-section" class="hidden">
+            <!-- Weight Input -->
+            <div id="retirada-weight-input">
+                <div class="header">
+                    <h1>Retirada de VMNI</h1>
+                    <p>Datos del Paciente</p>
+                </div>
+                
+                <form id="retirada-patient-form">
+                    <div class="form-group">
+                        <label for="peso-retirada" class="form-label">Peso del paciente (kg):</label>
+                        <input type="number" id="peso-retirada" class="form-control" min="0.5" max="150" step="0.1" required>
+                    </div>
+                    
+                    <div class="flex justify-between mt-24">
+                        <button type="button" class="btn btn--secondary" onclick="showSection('home')">
+                            ← Volver al Inicio
+                        </button>
+                        <button type="button" class="btn btn--primary" id="continue-to-retirada-checklist" disabled onclick="showRetiradaStep(1)">
+                            Continuar →
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Step 1: Pre-Withdrawal Checklist -->
+            <div id="retirada-step1" class="hidden">
+                <div class="header">
+                    <h1>Retirada de VMNI</h1>
+                    <p>Evaluación de Criterios para Retirada</p>
+                </div>
+                
+                <div class="alert alert-info">
+                    <strong>⚠️ Importante:</strong> Esta herramienta está diseñada para casos de VMNI paliativa donde se considera la retirada por futilidad médica. No aplicar en casos de destete convencional por mejoría clínica.
+                </div>
+                
+                <div class="checklist">
+                    <div class="checklist-item">
+                        <div class="checklist-question">1. ¿Se ha descartado mejoría clínica tras tratamiento óptimo y periodo de observación adecuado (24-96 horas)?</div>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="rq1-si" name="rq1" value="si">
+                                <label for="rq1-si">SÍ</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="rq1-no" name="rq1" value="no">
+                                <label for="rq1-no">NO</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="checklist-question">2. ¿La enfermedad de base es progresiva e irreversible?</div>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="rq2-si" name="rq2" value="si">
+                                <label for="rq2-si">SÍ</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="rq2-no" name="rq2" value="no">
+                                <label for="rq2-no">NO</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="checklist-question">3. ¿Se han descartado causas reversibles de insuficiencia respiratoria?</div>
+                        <div class="checklist-detail">infección no controlada, neumotórax, alteraciones metabólicas</div>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="rq3-si" name="rq3" value="si">
+                                <label for="rq3-si">SÍ</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="rq3-no" name="rq3" value="no">
+                                <label for="rq3-no">NO</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="checklist-question">4. ¿Se ha optimizado la VMNI?</div>
+                        <div class="checklist-detail">parámetros, interfase, fugas minimizadas</div>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="rq4-si" name="rq4" value="si">
+                                <label for="rq4-si">SÍ</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="rq4-no" name="rq4" value="no">
+                                <label for="rq4-no">NO</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="checklist-question">5. ¿El paciente está recibiendo sedación actualmente?</div>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="rq5-si" name="rq5" value="si" onchange="handleSedationQuestion()">
+                                <label for="rq5-si">SÍ</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="rq5-no" name="rq5" value="no" onchange="handleSedationQuestion()">
+                                <label for="rq5-no">NO</label>
+                            </div>
+                        </div>
+                        
+                        <div id="sedation-subquestions" class="hidden">
+                            <div class="sub-question">
+                                <div class="checklist-question">5a. ¿El paciente NECESITA la sedación para controlar irritabilidad, agitación o disconfort significativo?</div>
+                                <div class="radio-group">
+                                    <div class="radio-option">
+                                        <input type="radio" id="rq5a-si" name="rq5a" value="si" onchange="handleSedationNeed()">
+                                        <label for="rq5a-si">SÍ</label>
+                                    </div>
+                                    <div class="radio-option">
+                                        <input type="radio" id="rq5a-no" name="rq5a" value="no" onchange="handleSedationNeed()">
+                                        <label for="rq5a-no">NO</label>
+                                    </div>
+                                </div>
+                                
+                                <div id="sedation-reduction-question" class="hidden">
+                                    <div class="sub-question">
+                                        <div class="checklist-question">5b. ¿Sería posible REDUCIR ligeramente la sedación para poder evaluar si el paciente dispara el trigger del ventilador adecuadamente?</div>
+                                        <div class="radio-group">
+                                            <div class="radio-option">
+                                                <input type="radio" id="rq5b-si" name="rq5b" value="si">
+                                                <label for="rq5b-si">SÍ</label>
+                                            </div>
+                                            <div class="radio-option">
+                                                <input type="radio" id="rq5b-no" name="rq5b" value="no">
+                                                <label for="rq5b-no">NO</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="sedation-alerts"></div>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="checklist-question">6. ¿El paciente dispara el trigger?</div>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="rq6-si" name="rq6" value="si" onchange="handleTriggerQuestion()">
+                                <label for="rq6-si">SÍ</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="rq6-no" name="rq6" value="no" onchange="handleTriggerQuestion()">
+                                <label for="rq6-no">NO</label>
+                            </div>
+                        </div>
+                        
+                        <div id="trigger-subquestion" class="hidden">
+                            <div class="sub-question">
+                                <div class="checklist-question">6a. ¿Se ha puesto el trigger lo más sensible posible?</div>
+                                <div class="checklist-detail">Es obligatorio que se cumpla esta condición antes de retirar VMNI</div>
+                                <div class="radio-group">
+                                    <div class="radio-option">
+                                        <input type="radio" id="rq6a-si" name="rq6a" value="si">
+                                        <label for="rq6a-si">SÍ</label>
+                                    </div>
+                                    <div class="radio-option">
+                                        <input type="radio" id="rq6a-no" name="rq6a" value="no">
+                                        <label for="rq6a-no">NO</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="checklist-question">7. ¿El balance beneficio/carga de la VMNI es desfavorable?</div>
+                        <div class="checklist-detail">añade malestar, lesiones cutáneas, interfiere con confort</div>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="rq7-si" name="rq7" value="si">
+                                <label for="rq7-si">SÍ</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="rq7-no" name="rq7" value="no">
+                                <label for="rq7-no">NO</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="checklist-question">8. ¿Se han explorado alternativas?</div>
+                        <div class="checklist-detail">oxígeno de bajo flujo, cánula de alto flujo, mantener VMNI solo como confort</div>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="rq8-si" name="rq8" value="si">
+                                <label for="rq8-si">SÍ</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="rq8-no" name="rq8" value="no">
+                                <label for="rq8-no">NO</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="checklist-question">9. ¿Existe consenso clínico multiprofesional sobre futilidad o desproporción de continuar VMNI?</div>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="rq9-si" name="rq9" value="si">
+                                <label for="rq9-si">SÍ</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="rq9-no" name="rq9" value="no">
+                                <label for="rq9-no">NO</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="checklist-question">10. ¿La familia/tutores han sido informados completamente y están de acuerdo con la retirada?</div>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="rq10-si" name="rq10" value="si">
+                                <label for="rq10-si">SÍ</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="rq10-no" name="rq10" value="no">
+                                <label for="rq10-no">NO</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="checklist-question">11. ¿Están documentados los objetivos de cuidado?</div>
+                        <div class="checklist-detail">DNR vigente, no intubación, plan centrado en confort</div>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="rq11-si" name="rq11" value="si">
+                                <label for="rq11-si">SÍ</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="rq11-no" name="rq11" value="no">
+                                <label for="rq11-no">NO</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="checklist-item">
+                        <div class="checklist-question">12. ¿Están disponibles los recursos para retirada segura?</div>
+                        <div class="checklist-detail">equipo de paliativos, medicación anticipatoria, personal entrenado</div>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="rq12-si" name="rq12" value="si">
+                                <label for="rq12-si">SÍ</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="rq12-no" name="rq12" value="no">
+                                <label for="rq12-no">NO</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="retirada-result"></div>
+                
+                <div class="flex justify-between mt-24">
+                    <button type="button" class="btn btn--secondary" onclick="showSection('home')">
+                        ← Volver al Inicio
+                    </button>
+                    <button type="button" class="btn btn--primary" onclick="evaluateRetiradaChecklist()">
+                        Evaluar Criterios
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Step 2: Withdrawal Protocol -->
+            <div id="retirada-step2" class="hidden">
+                <div class="header">
+                    <h1>Protocolo de Retirada de VMNI</h1>
+                    <p>Preparación para Retirada Segura</p>
+                </div>
+                
+                <div class="alert alert-success">
+                    <strong>✅ CRITERIOS CUMPLIDOS:</strong> Puede proceder con la planificación de retirada según protocolo.
+                </div>
+                
+                <div class="parameters-container">
+                    <!-- This will be populated by generateWithdrawalProtocol() function -->
+                </div>
+                
+                <div class="alert alert-warning">
+                    <strong>⚠️ Importante:</strong> Este protocolo debe ser ejecutado bajo supervisión médica especializada en cuidados paliativos pediátricos. Ajustar dosis según peso y condición clínica del paciente.
+                </div>
+                
+                <div class="flex justify-between mt-24">
+                    <button type="button" class="btn btn--secondary" onclick="showRetiradaStep(1)">
+                        ← Volver
+                    </button>
+                    <button type="button" class="btn btn--success" onclick="printProtocol()">
+                        📄 Imprimir Protocolo
+                    </button>
+                    <button type="button" class="btn btn--primary" onclick="showSection('home')">
+                        🏠 Finalizar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2025 Dr. Álvaro Navarro - Cuidados Paliativos Pediátricos - Todos los derechos reservados</p>
+        </div>
+    </div>
+
+    <script>
+        // Application state
+        let currentSection = 'home';
+        let patientData = {};
+        let retiradaPatientWeight = 0;
+        let ageGroups = [
+            {
+                label: "Recién nacido (0-28 días)",
+                ipap_min: 8, ipap_max: 10,
+                epap_min: 4, epap_max: 5,
+                rr_backup_min: 30, rr_backup_max: 40,
+                ti_min: 0.5, ti_max: 0.7,
+                rise_time: "0.1-0.2"
+            },
+            {
+                label: "Lactante menor (1-6 meses)",
+                ipap_min: 8, ipap_max: 10,
+                epap_min: 4, epap_max: 5,
+                rr_backup_min: 25, rr_backup_max: 35,
+                ti_min: 0.5, ti_max: 0.7,
+                rise_time: "0.1-0.2"
+            },
+            {
+                label: "Lactante mayor (6-12 meses)",
+                ipap_min: 10, ipap_max: 12,
+                epap_min: 4, epap_max: 5,
+                rr_backup_min: 20, rr_backup_max: 30,
+                ti_min: 0.6, ti_max: 0.8,
+                rise_time: "0.2"
+            },
+            {
+                label: "Niño pequeño (1-3 años)",
+                ipap_min: 10, ipap_max: 12,
+                epap_min: 5, epap_max: 6,
+                rr_backup_min: 20, rr_backup_max: 25,
+                ti_min: 0.7, ti_max: 0.9,
+                rise_time: "0.2"
+            },
+            {
+                label: "Preescolar (3-6 años)",
+                ipap_min: 12, ipap_max: 14,
+                epap_min: 5, epap_max: 6,
+                rr_backup_min: 18, rr_backup_max: 22,
+                ti_min: 0.8, ti_max: 1.0,
+                rise_time: "0.2-0.3"
+            },
+            {
+                label: "Escolar (6-12 años)",
+                ipap_min: 12, ipap_max: 16,
+                epap_min: 5, epap_max: 7,
+                rr_backup_min: 15, rr_backup_max: 20,
+                ti_min: 0.9, ti_max: 1.1,
+                rise_time: "0.2-0.3"
+            },
+            {
+                label: "Adolescente (>12 años)",
+                ipap_min: 14, ipap_max: 18,
+                epap_min: 5, epap_max: 8,
+                rr_backup_min: 12, rr_backup_max: 18,
+                ti_min: 1.0, ti_max: 1.2,
+                rise_time: "0.3-0.4"
+            }
+        ];
+        
+        let indicationModifiers = {
+            hipoxemica: "Priorizar EPAP más alta (inicio en rango superior). Objetivo: mejorar oxigenación y reclutamiento alveolar. Titular FiO₂ para SpO₂ >92-94%",
+            hipercapnica: "Priorizar diferencial IPAP-EPAP amplio (soporte inspiratorio). Objetivo: aumentar volumen tidal y reducir PaCO₂. Frecuencia de respaldo en rango superior",
+            mixta: "Balance entre EPAP y soporte inspiratorio. Ajustar según respuesta gasométrica",
+            broncoespasmo: "EPAP moderada (evitar auto-PEEP excesiva). Rampa más lenta para mejor tolerancia. Ti corto (evitar atrapamiento aéreo)",
+            neumonia: "EPAP moderada-alta para reclutamiento. Soporte inspiratorio adecuado para descargar músculos respiratorios",
+            disnea: "CONSIDERAR CPAP inicialmente: 5-8 cmH₂O según edad. Si insuficiente: BiPAP con parámetros bajos y titular según confort. Priorizar tolerancia sobre valores 'óptimos'"
+        };
+
+        // Navigation functions
+        function showSection(section) {
+            // Hide all sections
+            document.getElementById('home-screen').classList.add('hidden');
+            document.getElementById('instauracion-section').classList.add('hidden');
+            document.getElementById('retirada-section').classList.add('hidden');
+            
+            // Show selected section
+            if (section === 'home') {
+                document.getElementById('home-screen').classList.remove('hidden');
+                currentSection = 'home';
+            } else if (section === 'instauracion') {
+                document.getElementById('instauracion-section').classList.remove('hidden');
+                showInstauracionStep(1);
+                currentSection = 'instauracion';
+            } else if (section === 'retirada') {
+                document.getElementById('retirada-section').classList.remove('hidden');
+                showRetiradaStep(0);
+                currentSection = 'retirada';
+            }
+        }
+
+        function showInstauracionStep(step) {
+            // Hide all steps
+            document.getElementById('instauracion-step1').classList.add('hidden');
+            document.getElementById('instauracion-step2').classList.add('hidden');
+            document.getElementById('instauracion-step3').classList.add('hidden');
+            
+            // Show selected step
+            document.getElementById('instauracion-step' + step).classList.remove('hidden');
+        }
+
+        function showRetiradaStep(step) {
+            // Hide weight input and all steps
+            document.getElementById('retirada-weight-input').classList.add('hidden');
+            document.getElementById('retirada-step1').classList.add('hidden');
+            document.getElementById('retirada-step2').classList.add('hidden');
+            
+            // Show selected step
+            if (step === 0) {
+                document.getElementById('retirada-weight-input').classList.remove('hidden');
+            } else {
+                document.getElementById('retirada-step' + step).classList.remove('hidden');
+            }
+        }
+
+        // Form validation for patient data
+        function validatePatientForm() {
+            const peso = document.getElementById('peso').value;
+            const edad = document.getElementById('edad').value;
+            const motivo = document.getElementById('motivo').value;
+            
+            const isValid = peso && edad !== '' && motivo !== '';
+            document.getElementById('continue-to-checklist').disabled = !isValid;
+            
+            if (isValid) {
+                patientData = {
+                    peso: parseFloat(peso),
+                    edad: parseInt(edad),
+                    edadLabel: ageGroups[parseInt(edad)].label,
+                    motivo: motivo
+                };
+            }
+        }
+
+        // Event listeners for form validation
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('peso').addEventListener('input', validatePatientForm);
+            document.getElementById('edad').addEventListener('change', validatePatientForm);
+            document.getElementById('motivo').addEventListener('change', validatePatientForm);
+            
+            document.getElementById('peso-retirada').addEventListener('input', validateRetiradaForm);
+        });
+        
+        // Validate retirada patient form
+        function validateRetiradaForm() {
+            const peso = document.getElementById('peso-retirada').value;
+            const isValid = peso && parseFloat(peso) > 0;
+            document.getElementById('continue-to-retirada-checklist').disabled = !isValid;
+            
+            if (isValid) {
+                retiradaPatientWeight = parseFloat(peso);
+            }
+        }
+
+        // Handle airway protection question
+        function handleAirwayQuestion() {
+            const airwayYes = document.querySelector('input[name="q3"][value="si"]').checked;
+            const airwayNo = document.querySelector('input[name="q3"][value="no"]').checked;
+            const subQuestionDiv = document.getElementById('airway-subquestion');
+            
+            if (airwayNo) {
+                subQuestionDiv.classList.remove('hidden');
+            } else {
+                subQuestionDiv.classList.add('hidden');
+                // Clear sub-question answers
+                document.querySelector('input[name="q3a"][value="si"]').checked = false;
+                document.querySelector('input[name="q3a"][value="no"]').checked = false;
+            }
+        }
+        
+        // Checklist evaluation for VMNI initiation
+        function evaluateChecklist() {
+            const questions = ['q1', 'q2', 'q3', 'q4', 'q5', 'q6'];
+            let yesCount = 0;
+            let noCount = 0;
+            let unanswered = [];
+            
+            questions.forEach(q => {
+                const yes = document.querySelector(`input[name="${q}"][value="si"]`).checked;
+                const no = document.querySelector(`input[name="${q}"][value="no"]`).checked;
+                
+                if (q === 'q3') {
+                    // Special handling for question 3
+                    if (yes) {
+                        yesCount++;
+                    } else if (no) {
+                        // Check sub-question
+                        const subYes = document.querySelector('input[name="q3a"][value="si"]')?.checked;
+                        const subNo = document.querySelector('input[name="q3a"][value="no"]')?.checked;
+                        
+                        if (subYes) {
+                            yesCount++; // Treat as yes if sub-question is yes
+                        } else if (subNo) {
+                            noCount++;
+                        } else {
+                            unanswered.push(q);
+                        }
+                    } else {
+                        unanswered.push(q);
+                    }
+                } else {
+                    if (yes) yesCount++;
+                    else if (no) noCount++;
+                    else unanswered.push(q);
+                }
+            });
+            
+            const resultDiv = document.getElementById('checklist-result');
+            
+            if (unanswered.length > 0) {
+                resultDiv.innerHTML = `
+                    <div class="alert alert-warning">
+                        <strong>⚠️ Evaluación incompleta:</strong> Por favor responda todas las preguntas antes de continuar.
+                    </div>
+                `;
+                return;
+            }
+            
+            if (noCount > 0) {
+                resultDiv.innerHTML = `
+                    <div class="alert alert-danger">
+                        <strong>⚠️ CRITERIOS NO CUMPLIDOS:</strong> Revise los criterios no cumplidos antes de iniciar VMNI. Considere consultar con especialista.
+                        <br><br>
+                        <strong>Criterios no cumplidos:</strong> ${noCount} de ${questions.length}
+                    </div>
+                `;
+            } else {
+                resultDiv.innerHTML = `
+                    <div class="alert alert-success">
+                        <strong>✓ CRITERIOS CUMPLIDOS:</strong> Puede proceder con la instauración de VMNI.
+                        <br><br>
+                        <button type="button" class="btn btn--success mt-24" onclick="generateParameters()">
+                            Continuar a Parámetros →
+                        </button>
+                    </div>
+                `;
+            }
+        }
+
+        // Generate ventilator parameters
+        function generateParameters() {
+            const ageGroup = ageGroups[patientData.edad];
+            const motivo = patientData.motivo;
+            
+            // Patient summary
+            const summaryHtml = `
+                <h3>Resumen del Paciente</h3>
+                <p><strong>Peso:</strong> ${patientData.peso} kg</p>
+                <p><strong>Edad:</strong> ${patientData.edadLabel}</p>
+                <p><strong>Motivo:</strong> ${getMotiveName(patientData.motivo)}</p>
+            `;
+            document.getElementById('patient-summary').innerHTML = summaryHtml;
+            
+            // Parameters calculation
+            const parametersHtml = `
+                <div class="parameters-title">PARÁMETROS RECOMENDADOS PARA ASTRAL 150</div>
+                <div class="parameter-section">
+                    <h4>⚙️ Configuración del Equipo</h4>
+                    <p><strong>Configuración:</strong> Rama única con válvula de fuga (puerto exhalatorio pasivo)</p>
+                    <p><strong>Modo ventilatorio recomendado:</strong></p>
+                    <ul>
+                        <li>Para IR aguda: <strong>S/T (Espontáneo/Temporizado)</strong> o <strong>PSV (Pressure Support)</strong></li>
+                        <li>Para control de disnea paliativo: <strong>CPAP</strong> puede ser suficiente</li>
+                    </ul>
+                </div>
+                
+                <div class="parameter-section">
+                    <h4>📊 Parámetros Iniciales</h4>
+                    <ul class="parameter-list">
+                        <li><span class="parameter-name">IPAP:</span> <span class="parameter-value">${ageGroup.ipap_min}-${ageGroup.ipap_max} cmH₂O</span></li>
+                        <li><span class="parameter-name">EPAP:</span> <span class="parameter-value">${ageGroup.epap_min}-${ageGroup.epap_max} cmH₂O</span></li>
+                        <li><span class="parameter-name">Frecuencia de respaldo:</span> <span class="parameter-value">${ageGroup.rr_backup_min}-${ageGroup.rr_backup_max} rpm</span></li>
+                        <li><span class="parameter-name">Tiempo inspiratorio (Ti):</span> <span class="parameter-value">${ageGroup.ti_min}-${ageGroup.ti_max} seg</span></li>
+                        <li><span class="parameter-name">Rise Time (Rampa):</span> <span class="parameter-value">${ageGroup.rise_time} seg</span></li>
+                    </ul>
+                </div>
+                
+                <div class="parameter-section">
+                    <h4>🎯 Ajustes Específicos según Motivo</h4>
+                    <div class="alert alert-info">
+                        <strong>${getMotiveName(motivo)}:</strong> ${indicationModifiers[motivo]}
+                    </div>
+                </div>
+                
+                <div class="parameter-section">
+                    <h4>🔧 Trigger y Ciclado (Astral 150)</h4>
+                    <ul class="parameter-list">
+                        <li><span class="parameter-name">Trigger inspiratorio:</span> <span class="parameter-value">Auto-ajustado por defecto. Si asincronías: ajustar manualmente a sensibilidad media (típicamente 2-3 L/min)</span></li>
+                        <li><span class="parameter-name">Ciclado espiratorio:</span> <span class="parameter-value">25% del flujo pico inspiratorio (por defecto adecuado para mayoría de casos)</span></li>
+                    </ul>
+                </div>
+                
+                <div class="parameter-section">
+                    <h4>🚨 Alarmas</h4>
+                    <ul class="parameter-list">
+                        <li><span class="parameter-name">Presión alta:</span> <span class="parameter-value">IPAP + 5 cmH₂O</span></li>
+                        <li><span class="parameter-name">Presión baja:</span> <span class="parameter-value">EPAP - 2 cmH₂O</span></li>
+                        <li><span class="parameter-name">Volumen minuto bajo:</span> <span class="parameter-value">según edad</span></li>
+                        <li><span class="parameter-name">Fugas altas:</span> <span class="parameter-value">activada</span></li>
+                        <li><span class="parameter-name">Apnea:</span> <span class="parameter-value">20 segundos</span></li>
+                    </ul>
+                </div>
+                
+                <div class="parameter-section">
+                    <h4>💨 Oxígeno Suplementario</h4>
+                    <ul>
+                        <li>Conectar al puerto de O₂ del Astral 150 (mezclador interno)</li>
+                        <li>Titular FiO₂ para SpO₂ objetivo según motivo</li>
+                    </ul>
+                </div>
+                
+                <div class="parameter-section">
+                    <h4>📋 Monitorización Recomendada</h4>
+                    <ul>
+                        <li>Evaluación clínica a 1 hora y 6 horas</li>
+                        <li><strong>Gasometría venosa o capilar</strong> a 1-2 horas post-inicio (NO arterial)</li>
+                        <li><strong>CO₂ espirado (capnografía)</strong> si disponible</li>
+                        <li>Frecuencia cardíaca, frecuencia respiratoria, SpO₂ continua</li>
+                        <li>Evaluar fugas (objetivo &lt;0.4 L/seg o &lt;24 L/min)</li>
+                        <li>Trabajo respiratorio mediante escala clínica</li>
+                        <li><strong>Monitorizar volumen corriente espirado:</strong> debe ser 6-8 ml/kg
+                            <ul>
+                                <li><strong>Volumen corriente objetivo para este paciente: ` + Math.round(patientData.peso * 6) + ` - ` + Math.round(patientData.peso * 8) + ` ml</strong></li>
+                                <li><strong>Si volumen corriente es INFERIOR al objetivo:</strong> considerar AUMENTAR IPAP</li>
+                                <li><strong>Si volumen corriente es SUPERIOR al objetivo:</strong> considerar DISMINUIR IPAP</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="alert alert-warning">
+                    <strong>⚠️ IMPORTANTE:</strong> Estos son parámetros INICIALES. Titular según respuesta clínica y gasométrica en primeras 6 horas.
+                </div>
+                
+                <div class="alert alert-info">
+                    <strong>💡 CONSEJO:</strong> Iniciar siempre con parámetros conservadores y aumentar gradualmente según tolerancia y necesidad.
+                </div>
+                
+                <div class="alert alert-success">
+                    <strong>📋 EVALUACIÓN:</strong> Mejoría esperada a las 6 horas: ↓FR &gt;20%, ↓FC &gt;10%, ↑SpO₂ a ≥94%
+                </div>
+                
+                <div class="alert alert-info">
+                    <strong>🔧 AJUSTES:</strong> Si HIPOXIA → valorar aumentar EPAP. Si HIPERCAPNIA → valorar aumentar IPAP
+                </div>
+                
+
+            `;
+            
+            document.getElementById('parameters-display').innerHTML = parametersHtml;
+            showInstauracionStep(3);
+        }
+
+        function getMotiveName(motivo) {
+            const names = {
+                hipoxemica: 'IR hipoxémica',
+                hipercapnica: 'IR hipercápnica',
+                mixta: 'IR mixta',
+                broncoespasmo: 'Broncoespasmo',
+                neumonia: 'Neumonía',
+                disnea: 'Control de disnea'
+            };
+            return names[motivo] || motivo;
+        }
+
+        // Handle trigger question for withdrawal
+        function handleTriggerQuestion() {
+            const triggerYes = document.querySelector('input[name="rq6"][value="si"]').checked;
+            const triggerNo = document.querySelector('input[name="rq6"][value="no"]').checked;
+            const subQuestionDiv = document.getElementById('trigger-subquestion');
+            
+            if (triggerNo) {
+                subQuestionDiv.classList.remove('hidden');
+            } else {
+                subQuestionDiv.classList.add('hidden');
+                // Clear sub-question answers
+                document.querySelector('input[name="rq6a"][value="si"]').checked = false;
+                document.querySelector('input[name="rq6a"][value="no"]').checked = false;
+            }
+        }
+        
+        // Sedation question handling
+        function handleSedationQuestion() {
+            const sedationYes = document.querySelector('input[name="rq5"][value="si"]').checked;
+            const sedationNo = document.querySelector('input[name="rq5"][value="no"]').checked;
+            const subQuestionsDiv = document.getElementById('sedation-subquestions');
+            const alertsDiv = document.getElementById('sedation-alerts');
+            
+            if (sedationYes) {
+                subQuestionsDiv.classList.remove('hidden');
+                alertsDiv.innerHTML = '';
+            } else if (sedationNo) {
+                subQuestionsDiv.classList.add('hidden');
+                alertsDiv.innerHTML = `
+                    <div class="alert alert-success">
+                        <strong>✓ Sin sedación excesiva:</strong> Puede evaluarse adecuadamente.
+                    </div>
+                `;
+            } else {
+                subQuestionsDiv.classList.add('hidden');
+                alertsDiv.innerHTML = '';
+            }
+        }
+
+        function handleSedationNeed() {
+            const needsYes = document.querySelector('input[name="rq5a"][value="si"]').checked;
+            const needsNo = document.querySelector('input[name="rq5a"][value="no"]').checked;
+            const reductionDiv = document.getElementById('sedation-reduction-question');
+            const alertsDiv = document.getElementById('sedation-alerts');
+            
+            if (needsYes) {
+                reductionDiv.classList.remove('hidden');
+                alertsDiv.innerHTML = '';
+            } else if (needsNo) {
+                reductionDiv.classList.add('hidden');
+                alertsDiv.innerHTML = `
+                    <div class="alert alert-danger">
+                        <strong>⚠️ SEDACIÓN EXCESIVA:</strong> Si la sedación no es necesaria para confort del paciente, debe reducirse/suspenderse para permitir evaluación neurológica adecuada antes de decidir retirada.
+                    </div>
+                `;
+            }
+        }
+
+        // Evaluate withdrawal checklist
+        function evaluateRetiradaChecklist() {
+            const questions = ['rq1', 'rq2', 'rq3', 'rq4', 'rq5', 'rq6', 'rq7', 'rq8', 'rq9', 'rq10', 'rq11', 'rq12'];
+            let yesCount = 0;
+            let criticalIssues = [];
+            let unanswered = [];
+            
+            questions.forEach(q => {
+                const yes = document.querySelector(`input[name="${q}"][value="si"]`)?.checked;
+                const no = document.querySelector(`input[name="${q}"][value="no"]`)?.checked;
+                
+                if (q === 'rq6') {
+                    // Special handling for trigger question 6
+                    if (yes) {
+                        yesCount++;
+                    } else if (no) {
+                        // Check sub-question
+                        const subYes = document.querySelector('input[name="rq6a"][value="si"]')?.checked;
+                        const subNo = document.querySelector('input[name="rq6a"][value="no"]')?.checked;
+                        
+                        if (subYes) {
+                            yesCount++; // Treat as acceptable if trigger set to max sensitivity
+                        } else if (subNo) {
+                            criticalIssues.push('trigger-critical');
+                        } else {
+                            unanswered.push(q);
+                        }
+                    } else {
+                        unanswered.push(q);
+                    }
+                } else if (yes) {
+                    yesCount++;
+                } else if (no) {
+                    // Check critical questions
+                    if (q === 'rq5' || q === 'rq10' || q === 'rq11') {
+                        criticalIssues.push(q);
+                    }
+                } else {
+                    unanswered.push(q);
+                }
+            });
+            
+            // Special handling for sedation sub-questions
+            const sedationYes = document.querySelector('input[name="rq5"][value="si"]')?.checked;
+            if (sedationYes) {
+                const needsYes = document.querySelector('input[name="rq5a"][value="si"]')?.checked;
+                const canReduceNo = document.querySelector('input[name="rq5b"][value="no"]')?.checked;
+                const needsNo = document.querySelector('input[name="rq5a"][value="no"]')?.checked;
+                
+                if (needsNo || (needsYes && canReduceNo)) {
+                    criticalIssues.push('sedation');
+                }
+            }
+            
+            const resultDiv = document.getElementById('retirada-result');
+            
+            if (unanswered.length > 0) {
+                resultDiv.innerHTML = `
+                    <div class="alert alert-warning">
+                        <strong>⚠️ Evaluación incompleta:</strong> Por favor responda todas las preguntas antes de continuar.
+                    </div>
+                `;
+                return;
+            }
+            
+            if (criticalIssues.includes('trigger-critical') || criticalIssues.length > 1 || yesCount < 9) {
+                let criticalMessages = [];
+                
+                if (criticalIssues.includes('sedation')) {
+                    criticalMessages.push('Sedación excesiva o no evaluable');
+                }
+                if (criticalIssues.includes('trigger-critical')) {
+                    criticalMessages.push('Trigger no ajustado a sensibilidad máxima - OBLIGATORIO antes de retirada');
+                }
+                if (criticalIssues.includes('rq10')) {
+                    criticalMessages.push('Familia no informada o en desacuerdo');
+                }
+                if (criticalIssues.includes('rq11')) {
+                    criticalMessages.push('Objetivos de cuidado no documentados');
+                }
+                
+                resultDiv.innerHTML = `
+                    <div class="alert alert-danger">
+                        <strong>🛑 CRITERIOS NO CUMPLIDOS - NO PROCEDER CON RETIRADA</strong>
+                        <br><br>
+                        <strong>Puntuación:</strong> ${yesCount}/12 criterios cumplidos
+                        <br><br>
+                        ${criticalMessages.length > 0 ? `<strong>Problemas críticos identificados:</strong><ul>${criticalMessages.map(msg => `<li>${msg}</li>`).join('')}</ul>` : ''}
+                        <br>
+                        La retirada de VMNI NO está indicada en este momento. Atienda primero los criterios no cumplidos.
+                    </div>
+                `;
+            } else if (yesCount >= 9 && yesCount < 12) {
+                resultDiv.innerHTML = `
+                    <div class="alert alert-warning">
+                        <strong>⚠️ CRITERIOS PARCIALMENTE CUMPLIDOS</strong>
+                        <br><br>
+                        <strong>Puntuación:</strong> ${yesCount}/12 criterios cumplidos
+                        <br><br>
+                        Revise los criterios no cumplidos antes de proceder. Puede ser necesario retrasar la decisión.
+                        <br><br>
+                        <button type="button" class="btn btn--secondary" onclick="evaluateRetiradaChecklist()">
+                            Revisar Checklist
+                        </button>
+                    </div>
+                `;
+            } else {
+                resultDiv.innerHTML = `
+                    <div class="alert alert-success">
+                        <strong>✅ CRITERIOS CUMPLIDOS PARA RETIRADA DE VMNI</strong>
+                        <br><br>
+                        <strong>Puntuación:</strong> ${yesCount}/12 criterios cumplidos
+                        <br><br>
+                        Todos los criterios de seguridad y adecuación están cumplidos. Puede proceder con la planificación de retirada según protocolo.
+                        <br><br>
+                        <button type="button" class="btn btn--success" onclick="generateWithdrawalProtocol()">
+                            Continuar a Protocolo de Retirada →
+                        </button>
+                    </div>
+                `;
+            }
+        }
+
+        // Print functions
+        function printParameters() {
+            const printWindow = window.open('', '_blank');
+            const patientSummary = document.getElementById('patient-summary').innerHTML;
+            const parameters = document.getElementById('parameters-display').innerHTML;
+            
+            printWindow.document.write(`
+                <html>
+                <head>
+                    <title>Parámetros de VMNI - ${patientData.edadLabel}</title>
+                    <style>
+                        body { font-family: Arial, sans-serif; margin: 20px; }
+                        h1, h2, h3, h4 { color: #2C5F7C; }
+                        .alert { padding: 10px; margin: 10px 0; border-left: 4px solid #2C5F7C; }
+                        .parameter-list { list-style: none; padding: 0; }
+                        .parameter-list li { padding: 5px 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; }
+                        .parameter-name { font-weight: bold; }
+                        .parameter-value { color: #2C5F7C; font-weight: bold; }
+                        .footer { margin-top: 30px; font-size: 12px; color: #666; text-align: center; }
+                    </style>
+                </head>
+                <body>
+                    <h1>Parámetros Recomendados de VMNI Pediátrica</h1>
+                    ${patientSummary}
+                    ${parameters}
+                    <div class="footer">
+                        <p>Generado el ${new Date().toLocaleDateString('es-ES')} - © Dr. Álvaro Navarro</p>
+                    </div>
+                </body>
+                </html>
+            `);
+            printWindow.document.close();
+            printWindow.print();
+        }
+
+        // Generate withdrawal protocol with calculated doses
+        function generateWithdrawalProtocol() {
+            // First generate the protocol content with calculated doses
+            const protocolHtml = `
+                <div class="parameters-title">PROTOCOLO DE PREPARACIÓN PARA RETIRADA</div>
+                <div class="parameter-section">
+                    <p><strong>Peso del paciente: ${retiradaPatientWeight} kg</strong></p>
+                </div>
+                
+                <div class="parameter-section">
+                    <h4>📅 6 HORAS ANTES:</h4>
+                    <div class="protocol-item">
+                        <input type="checkbox" id="p1">
+                        <label for="p1">Suspender alimentación enteral</label>
+                    </div>
+                    <div class="protocol-item">
+                        <input type="checkbox" id="p2">
+                        <label for="p2">Reducir fluidos IV a mínimo</label>
+                    </div>
+
+                    <div class="protocol-item">
+                        <input type="checkbox" id="p4">
+                        <label for="p4">Si sobrehidratación: Furosemida 1 mg/kg IV
+                            <br>Dosis calculada: <strong>${Math.round(retiradaPatientWeight * 1)} mg</strong></label>
+                    </div>
+                </div>
+                
+                <div class="parameter-section">
+                    <h4>⏰ 30 MINUTOS ANTES:</h4>
+                    <div class="protocol-item">
+                        <input type="checkbox" id="p5">
+                        <label for="p5"><strong>Morfina 0.05-0.1 mg/kg IV/SC</strong>
+                            <br>Dosis calculada para este paciente: <strong>${(retiradaPatientWeight * 0.05).toFixed(2)}-${(retiradaPatientWeight * 0.1).toFixed(2)} mg</strong></label>
+                    </div>
+                    <div class="protocol-item">
+                        <input type="checkbox" id="p6">
+                        <label for="p6"><strong>Midazolam 0.05-0.1 mg/kg IV/SC</strong>
+                            <br>Dosis calculada para este paciente: <strong>${(retiradaPatientWeight * 0.05).toFixed(2)}-${(retiradaPatientWeight * 0.1).toFixed(2)} mg</strong></label>
+                    </div>
+                    <div class="protocol-item">
+                        <input type="checkbox" id="p7">
+                        <label for="p7"><strong>Butilescopolamina 20 mg IV (o 0.3-0.6 mg/kg)</strong>
+                            <br>Dosis calculada para este paciente: <strong>${(retiradaPatientWeight * 0.3).toFixed(1)}-${(retiradaPatientWeight * 0.6).toFixed(1)} mg</strong> ${retiradaPatientWeight >= 30 ? '(o 20 mg dosis fija)' : ''}</label>
+                    </div>
+
+                </div>
+                
+                <div class="parameter-section">
+                    <h4>💊 MEDICACIÓN PRN PREPARADA (en cabecera):</h4>
+                    <div class="protocol-item">
+                        <input type="checkbox" id="p9">
+                        <label for="p9"><strong>Morfina</strong> (múltiples dosis de 0.05-0.1 mg/kg)
+                            <br>Preparar 4-6 jeringas de: <strong>${(retiradaPatientWeight * 0.05).toFixed(2)}-${(retiradaPatientWeight * 0.1).toFixed(2)} mg</strong> cada una</label>
+                    </div>
+                    <div class="protocol-item">
+                        <input type="checkbox" id="p10">
+                        <label for="p10"><strong>Midazolam</strong> (múltiples dosis de 0.05-0.1 mg/kg)
+                            <br>Preparar 4-6 jeringas de: <strong>${(retiradaPatientWeight * 0.05).toFixed(2)}-${(retiradaPatientWeight * 0.1).toFixed(2)} mg</strong> cada una</label>
+                    </div>
+                    <div class="protocol-item">
+                        <input type="checkbox" id="p11">
+                        <label for="p11"><strong>Butilescopolamina</strong> adicional (2-3 dosis)
+                            <br>Preparar dosis de: <strong>${(retiradaPatientWeight * 0.3).toFixed(1)}-${(retiradaPatientWeight * 0.6).toFixed(1)} mg</strong> ${retiradaPatientWeight >= 30 ? '(o 20 mg si ≥30kg)' : ''}</label>
+                    </div>
+                    <div class="protocol-item">
+                        <input type="checkbox" id="p12">
+                        <label for="p12">Vías IV/SC permeables y funcionales</label>
+                    </div>
+                </div>
+                
+                <div class="parameter-section">
+                    <h4>👥 COORDINACIÓN Y PREPARACIÓN:</h4>
+                    <div class="protocol-item">
+                        <input type="checkbox" id="p13">
+                        <label for="p13">Familia presente y en acuerdo con el plan</label>
+                    </div>
+                    <div class="protocol-item">
+                        <input type="checkbox" id="p14">
+                        <label for="p14">Equipo cuidados paliativos disponible</label>
+                    </div>
+                    <div class="protocol-item">
+                        <input type="checkbox" id="p15">
+                        <label for="p15">Habitación privada preparada y ambientada</label>
+                    </div>
+                    <div class="protocol-item">
+                        <input type="checkbox" id="p16">
+                        <label for="p16">Rituales espirituales completados según deseos familiares</label>
+                    </div>
+                    <div class="protocol-item">
+                        <input type="checkbox" id="p17">
+                        <label for="p17">Plan de Cuidado de Emergencia (PCE) completado y distribuido</label>
+                    </div>
+                    <div class="protocol-item">
+                        <input type="checkbox" id="p18">
+                        <label for="p18">Consta en historia clínica discusión sobre toma de decisiones y no reanimación</label>
+                    </div>
+                    <div class="protocol-item">
+                        <input type="checkbox" id="p19">
+                        <label for="p19">Personal de enfermería capacitado disponible</label>
+                    </div>
+                </div>
+            `;
+            
+            // Update the protocol container
+            document.querySelector('#retirada-step2 .parameters-container').innerHTML = protocolHtml;
+            
+            // Navigate to the protocol step
+            showRetiradaStep(2);
+        }
+
+        function printProtocol() {
+            const printWindow = window.open('', '_blank');
+            const protocol = document.querySelector('#retirada-step2 .parameters-container').innerHTML;
+            
+            printWindow.document.write(`
+                <html>
+                <head>
+                    <title>Protocolo de Retirada de VMNI</title>
+                    <style>
+                        body { font-family: Arial, sans-serif; margin: 20px; }
+                        h1, h2, h3, h4 { color: #2C5F7C; }
+                        .protocol-item { margin: 5px 0; }
+                        input[type="checkbox"] { margin-right: 8px; }
+                        .footer { margin-top: 30px; font-size: 12px; color: #666; text-align: center; }
+                    </style>
+                </head>
+                <body>
+                    <h1>Protocolo de Retirada de VMNI Pediátrica</h1>
+                    <p><strong>Peso del paciente: ${retiradaPatientWeight} kg</strong></p>
+                    ${protocol}
+                    <div class="footer">
+                        <p>Generado el ${new Date().toLocaleDateString('es-ES')} - © Dr. Álvaro Navarro</p>
+                    </div>
+                </body>
+                </html>
+            `);
+            printWindow.document.close();
+            printWindow.print();
+        }
+    </script>
+</body>
+</html>
